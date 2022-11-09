@@ -9,10 +9,11 @@ on:
   pull_request:
     branches: [ "main" ]
     
+job
 
-
-workflows:
-  my-workflow:
-    environment:
-      xcode: 12.5
+- uses: swift-actions/setup-swift@v1
+  with:
+    swift-version: "5.1.0"
+- name: Get swift version
+  run: swift --version # Swift 5.1.0
 
