@@ -7,7 +7,7 @@ target 'GithubActionsIOS' do
 
   # Pods for GithubActionsIOS
 
-pod 'IQKeyboardManagerSwift'
+
 
 
 end

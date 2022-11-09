@@ -88,7 +88,6 @@
 				B9CE85AB18312D223ACFF126 /* Pods-GithubActionsIOS.debug.xcconfig */,
 				638494C40C100E561DD7A1A3 /* Pods-GithubActionsIOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -103,7 +102,6 @@
 				6332B50E291B7B3700963C67 /* Sources */,
 				6332B50F291B7B3700963C67 /* Frameworks */,
 				6332B510291B7B3700963C67 /* Resources */,
-				D6B6609BD1EB62FCE113CB50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 6332B509291B7B3700963C67;
+			packageReferences = (
+				6332B529291B8D7500963C67 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */,
+			);
 			productRefGroup = 6332B513291B7B3700963C67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,23 +162,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D6B6609BD1EB62FCE113CB50 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GithubActionsIOS/Pods-GithubActionsIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GithubActionsIOS/Pods-GithubActionsIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubActionsIOS/Pods-GithubActionsIOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ED722B1D16F39CEED1B19380 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,6 +419,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6332B529291B8D7500963C67 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 6332B50A291B7B3700963C67 /* Project object */;
 }
