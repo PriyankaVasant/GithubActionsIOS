@@ -21,3 +21,4 @@ with:
   scheme: GithubActionsIOS
   destination: platform=macOS
   action: test
+
