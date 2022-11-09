@@ -1,6 +1,7 @@
 # This workflow will build a Swift project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
 
+
 name: Swift
 
 on:
@@ -9,13 +10,13 @@ on:
   pull_request:
     branches: [ "main" ]
 
-job:
+jobs:
   build:
 
     runs-on: macos-latest
 
-   steps:
-
-  - name: test job
-    run: echo hello world
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run a script 
+      run: echo Hello Worldworld
 
