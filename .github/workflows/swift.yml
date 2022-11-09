@@ -9,8 +9,9 @@ on:
   pull_request:
     branches: [ "main" ]
     
-job
-  build:
+jobs:
+
+build:
 
     runs-on: macos-latest
 
