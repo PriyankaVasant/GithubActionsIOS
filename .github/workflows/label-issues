@@ -8,6 +8,8 @@
 # You can also reference a tag or branch, but the action may change without warning.
 
 name: Label issues
+run-name:  Creating Label issues through GitHub Actions
+
 on:
   issues:
     types:
