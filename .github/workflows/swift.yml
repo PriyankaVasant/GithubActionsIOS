@@ -15,7 +15,9 @@ jobs:
 
     runs-on: macos-latest
 steps:
-  uses: Didstopia/SwiftAction@v1.0.1
+uses: sersoft-gmbh/xcodebuild-action@v2
 with:
-  swift-action: 'build'
-      
+  project: GithubActionsIOS.xcodeproj
+  scheme: GithubActionsIOS
+  destination: platform=macOS
+  action: test
