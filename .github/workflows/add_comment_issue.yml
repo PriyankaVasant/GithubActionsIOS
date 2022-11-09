@@ -16,7 +16,7 @@ on:
       - labeled
 jobs:
   add-comment:
-    if: github.event.label.name == 'issues'
+    if: github.event.label.name == "issues"
     runs-on: ubuntu-latest
     permissions:
       issues: write
