@@ -8,18 +8,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
+    
 jobs:
-  build:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Run a script 
-      run: echo Hello World
-      
-  jobs:
   build:
 
     runs-on: macos-latest
