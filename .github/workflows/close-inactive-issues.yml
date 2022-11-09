@@ -1,4 +1,7 @@
 name: Close inactive issues
+
+run-name:  Close inactive issues through GitHub Actions
+
 on:
   schedule:
     - cron: "30 1 * * *"
