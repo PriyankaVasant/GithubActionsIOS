@@ -25,7 +25,6 @@
 		6332B51E291B7B3900963C67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6332B521291B7B3900963C67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6332B523291B7B3900963C67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63653366291B8E9B0002BABF /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		638494C40C100E561DD7A1A3 /* Pods-GithubActionsIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubActionsIOS.release.xcconfig"; path = "Target Support Files/Pods-GithubActionsIOS/Pods-GithubActionsIOS.release.xcconfig"; sourceTree = "<group>"; };
 		9DD5756756C18A8C3B3D0E01 /* Pods_GithubActionsIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubActionsIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CE85AB18312D223ACFF126 /* Pods-GithubActionsIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubActionsIOS.debug.xcconfig"; path = "Target Support Files/Pods-GithubActionsIOS/Pods-GithubActionsIOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -46,7 +45,6 @@
 		6332B509291B7B3700963C67 = {
 			isa = PBXGroup;
 			children = (
-				63653366291B8E9B0002BABF /* Package.swift */,
 				6332B514291B7B3700963C67 /* GithubActionsIOS */,
 				6332B513291B7B3700963C67 /* Products */,
 				DAEB8D081058791AEBCCD744 /* Pods */,
@@ -139,6 +137,7 @@
 			);
 			mainGroup = 6332B509291B7B3700963C67;
 			packageReferences = (
+				63653368291B91240002BABF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 6332B513291B7B3700963C67 /* Products */;
 			projectDirPath = "";
@@ -420,6 +419,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63653368291B91240002BABF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 6332B50A291B7B3700963C67 /* Project object */;
 }
