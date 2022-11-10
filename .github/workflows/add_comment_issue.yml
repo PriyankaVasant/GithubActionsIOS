@@ -12,16 +12,15 @@
 
 
 name: Add comment
-run-name:  Add comment on issues through GitHub Actions
-
+run-name: Add comment on label 
 on:
   issues:
     types:
       - labeled
 jobs:
   add-comment:
-    if: github.event.label.name == "issues"
-    runs-on: macos-latest
+    if: github.event.label.name == 'issues'
+    runs-on: ubuntu-latest
     permissions:
       issues: write
     steps:
@@ -29,6 +28,5 @@ jobs:
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
           issue-number: ${{ github.event.issue.number }}
-         body: |
+          body: |
             This issue is available for anyone to work on. **Make sure to reference this issue in your pull request.** :sparkles: Thank you for your contribution! :sparkles:
-
