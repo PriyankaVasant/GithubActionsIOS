@@ -35,7 +35,7 @@ jobs:
     name: Move to In Progress Column
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: move_issue_assignedCard/checkout@v2
       - name: Move to In Progress
         uses: ./
         with:
