@@ -20,7 +20,7 @@ name: Move assigned card
 on: [issues]
 jobs:
   add-new-issues-to-project-column:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Move assigned card
       uses: docker://takanabe/github-actions-automate-projects:v0.0.1
