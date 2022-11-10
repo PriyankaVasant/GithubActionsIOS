@@ -23,15 +23,17 @@
 # GitHub recommends pinning actions to a commit SHA.
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
+name: Move assigned card
 on:
   issues:
-    types: [assigned]
+    types:
+      - assigned
 jobs:
-  Add_New_Issue_To_Project:
+  move-assigned-card:
     runs-on: ubuntu-latest
     steps:
-    - uses: konradpabjan/actions-add-new-issue-to-column@v1.1
-      with:
-        action-token: "${{ secrets.DOCS_API_KEY }}"
-        project-url: "https://github.com/users/PriyankaVasant/projects/9"
-        column-name: "In Progress"
+      - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
+        with:
+          project: Backlog
+          column: In Progress
+          repo-token: ${{ secrets.DOCS_API_KEY }}
