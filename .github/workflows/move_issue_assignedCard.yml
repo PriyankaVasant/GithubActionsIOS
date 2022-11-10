@@ -29,4 +29,4 @@ jobs:
         with:
           project: Backlog
           column: In progress
-          repo-token: ${{ secrets.Docs_API_KEY }}
+          repo-token: ${{ secrets.API_KEY }}
