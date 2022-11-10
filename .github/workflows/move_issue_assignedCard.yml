@@ -25,8 +25,8 @@
 # You can also reference a tag or branch, but the action may change without warning.
 name: Move new issues into Project Board Column
 on:
-  pull_request:
-    types: [ closed ]
+  issues:
+    types: [ assigned ]
 jobs:
   move-issue-to-repository-project-column-on-pull-request:
     name: Move issues to repository project column
