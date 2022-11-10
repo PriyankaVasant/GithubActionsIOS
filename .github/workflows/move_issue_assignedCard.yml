@@ -20,7 +20,7 @@ name: Move new issues into Triage
 
 on:
   issues:
-    types: [assigend]
+    types: [assigned]
 
 jobs:
   automate-project-columns:
