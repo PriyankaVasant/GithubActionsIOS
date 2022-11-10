@@ -11,4 +11,4 @@ jobs:
         with:
           project: Backlog
           column: In Progress
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.API_KEY }}
