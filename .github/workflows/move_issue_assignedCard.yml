@@ -16,13 +16,13 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Add a new GitHub issue to the specified project column
+name: Move assigned card
 on: [issues]
 jobs:
   add-new-issues-to-project-column:
     runs-on: ubuntu-latest
     steps:
-    - name: add-new-issues-to-organization-based-project-column
+    - name: Move assigned card
       uses: docker://takanabe/github-actions-automate-projects:v0.0.1
       if: github.event_name == 'issues' && github.event.action == 'assigned'
       env:
