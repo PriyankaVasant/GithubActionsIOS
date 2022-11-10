@@ -1,13 +1,14 @@
+name: Move assigned card
 on:
   issues:
-    types: [assigned]
+    types:
+      - assigned
 jobs:
-  Move_Labeled_Issue_On_Project_Board:
+  move-assigned-card:
     runs-on: ubuntu-latest
     steps:
-    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
-      with:
-        action-token: "${{ secrets.DOCS_API_KEY }}"
-        project-url: "https://github.com/users/PriyankaVasant/projects/8"
-        label-name: "issues"
-        column-name: "In Progress"
+      - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
+        with:
+          project: Backlog
+          column: In Progress
+          repo-token: ${{ secrets.DOCS_API_KEY }}
