@@ -16,18 +16,17 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Automate project columns
-
-on: [issues]
-
+name: Move assigned card
+on:
+  issues:
+    types:
+      - assigned
 jobs:
-  automate-project-columns:
+  move-assigned-card:
     runs-on: ubuntu-latest
     steps:
-      - name: Move assigned pull requests into To do
-        if: github.event_name == 'issues' && github.event.action == 'assigned'
-        uses: alex-page/automate-project-columns@master
+      - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
         with:
-          project: Backlog
+          project: Docs Work
           column: In Progress
           repo-token: ${{ secrets.DOCS_API_KEY }}
