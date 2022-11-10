@@ -27,5 +27,5 @@ jobs:
       if:  github.event.action == 'assigned'
       env:
         GITHUB_TOKEN: ${{ secrets.DOCS_API_KEY }}
-        GITHUB_PROJECT_URL: https://github.com/users/PriyankaVasant/projects/8
+        GITHUB_PROJECT_URL: https://github.com/users/PriyankaVasant/projects/7
         GITHUB_PROJECT_COLUMN_NAME: In Progress
