@@ -1,26 +1,19 @@
 #name of your config
 name: Swift Build
 
-#when to trigger the jobs
-on: 
+on:
   push:
-    branches: [ main ] #trigger on each push to master
+    branches: [ main ]
   pull_request:
-    branches: [ main ] #trigger on each PR for master
+    branches: [ main ]
 
-#list of jobs to perform
 jobs:
-  #the only job in the list, named `build`
-  build: 
-    #specify OS to run the jobs on
-    runs-on: macos-latest 
-    #sequential steps to run for the `build` job
-    steps: 
-      # step 1, use Marketplace action called Checkout@v2, to checkout the code
-    - uses: actions/checkout@v2 #'uses' keyword launches the Marketplace action
-      # step 2, verbosely build the package using the `swift` CLI
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
     - name: Build
-      run: swift build -v #'run' keyword executes the command, as if it's run in terminal
-      # step 3, verbosely test the package using the `swift` CLI
+      run: swift build -v
     - name: Run tests
-      run: swift test -v #'run' keyword executes the command, as if it's run in terminal
