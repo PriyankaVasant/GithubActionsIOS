@@ -8,5 +8,5 @@ jobs:
     - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
       with:
         action-token: "${{ secrets.MY_TOKEN }}"
-        project-url: "https://github.com/orgs/github/projects/1"
+        project-url: "https://github.com/users/PriyankaVasant/projects/8"
         column-name: "In Progress"
