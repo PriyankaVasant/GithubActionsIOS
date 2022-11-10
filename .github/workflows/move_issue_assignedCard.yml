@@ -24,7 +24,7 @@ jobs:
     steps:
     - name: Move assigned card
       uses: docker://takanabe/github-actions-automate-projects:v0.0.1
-      if: github.event_name == 'issues' && github.event.action == 'opened'
+      if:  github.event.action == 'assigned'
       env:
         GITHUB_TOKEN: ${{ secrets.DOCS_API_KEY }}
         GITHUB_PROJECT_URL: https://github.com/users/PriyankaVasant/projects/8
