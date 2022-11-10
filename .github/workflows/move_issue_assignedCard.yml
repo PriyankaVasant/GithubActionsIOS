@@ -23,21 +23,22 @@
 # GitHub recommends pinning actions to a commit SHA.
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
-name: Move new issues into Project Board Column
+name: Assigned Issues Are In Progress
+
 on:
   issues:
-    types: [ assigned ]
+    types: [assigned]
+
 jobs:
-  move-issue-to-repository-project-column-on-pull-request:
-    name: Move issues to repository project column
+  move-to-in-progress:
     runs-on: ubuntu-latest
+    name: Move to In Progress Column
     steps:
-      - name: Move all issues related to current PR(into main branch) and child PRs to 'Done' column
-        uses: fojia/action-move-issues-to-column@master
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Move to In Progress
+        uses: ./
         with:
-          project: 'My Project'
-          column: 'In Progress'
-          owner: 'fojia'
-          repo: 'action-move-issues-to-column'
-          github_token: ${{ secrets.API_KEY }}
-          branch: main
+          access-token: "${{ secrets.DOCS_API_KEY }}"
+          project-name: "My Project"
+          target-column: "In Progress"
