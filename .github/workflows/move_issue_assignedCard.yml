@@ -23,17 +23,21 @@
 # GitHub recommends pinning actions to a commit SHA.
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
-name: Move assigned card
+name: Move new issues into Project Board Column
 on:
   issues:
-    types:
-      - opened
+    types: [ assigned ]
 jobs:
-  move-assigned-card:
-    runs-on: macos-latest
+  move-issue-to-repository-project-column-on-pull-request:
+    name: Move issues to repository project column
+    runs-on: ubuntu-latest
     steps:
-      - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
+      - name: Move all issues related to current PR(into main branch) and child PRs to 'Done' column
+        uses: fojia/action-move-issues-to-column@master
         with:
-          project: LetsRock
-          column: In Progress
-          repo-token: ${{ secrets.DOCS_API_KEY }}
+          project: 'LetsRock'
+          column: 'In Progress'
+          owner: 'fojia'
+          repo: 'action-move-issues-to-column'
+          github_token: ${{ secrets.DOCS_API_KEY }}
+          branch: main
