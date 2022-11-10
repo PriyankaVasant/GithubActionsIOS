@@ -23,10 +23,11 @@
 # GitHub recommends pinning actions to a commit SHA.
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
+
 name: Assigned Issues Are In Progress
 
 on:
-  issues:
+  issue:
     types: [assigned]
 
 jobs:
@@ -35,10 +36,10 @@ jobs:
     name: Move to In Progress Column
     steps:
       - name: Checkout
-        uses: move_issue_assignedCard/checkout@v2
-      - name: Move to In Progress
-        uses: ./
-        with:
-          access-token: "${{ secrets.DOCS_API_KEY }}"
-          project-name: "My Project"
-          target-column: "In Progress"
+        uses: actions/checkout@v2
+	   - name: Move to In Progress
+	    uses: kin/gh-action-move-issue-to-column@1.0
+		with:
+		  access-token: "#{{ secrets.DOCS_API_KEY }}"
+		  project-name: "My Project"
+		  target-column: "In Progress"
