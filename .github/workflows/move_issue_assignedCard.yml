@@ -20,7 +20,7 @@ name: Add a new GitHub issue to the specified project column
 on: [issues, pull_request]
 jobs:
   add-new-issues-to-project-column:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
     - name: add-new-issues-to-organization-based-project-column
       uses: docker://takanabe/github-actions-automate-projects:v0.0.1
