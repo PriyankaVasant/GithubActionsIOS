@@ -29,4 +29,4 @@ jobs:
         with:
           project: GithubActionsIOS
           column: In Progress
-          repo-token: ${{ secrets.DOCS_API_KEY }}
+          repo-token: ${{ secrets.Docs_API_KEY }}
