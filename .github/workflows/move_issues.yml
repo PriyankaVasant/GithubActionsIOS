@@ -7,6 +7,6 @@ jobs:
     steps:
     - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
       with:
-        action-token: "${{ secrets.MY_TOKEN }}"
+        action-token: "${{ secrets.DOCS_API_KEY }}"
         project-url: "https://github.com/users/PriyankaVasant/projects/8"
         column-name: "In Progress"
