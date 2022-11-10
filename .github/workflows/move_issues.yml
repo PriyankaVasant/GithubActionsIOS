@@ -9,4 +9,5 @@ jobs:
       with:
         action-token: "${{ secrets.DOCS_API_KEY }}"
         project-url: "https://github.com/users/PriyankaVasant/projects/8"
+        label-name: "issues"
         column-name: "In Progress"
