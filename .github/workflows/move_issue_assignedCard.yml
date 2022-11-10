@@ -39,5 +39,5 @@ jobs:
           column: 'In Progress'
           owner: 'fojia'
           repo: 'action-move-issues-to-column'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.API_KEY }}
           branch: main
