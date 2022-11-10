@@ -1,12 +1,12 @@
 #name of your config
-name: Swift
+name: Swift Build
 
 #when to trigger the jobs
 on: 
   push:
-    branches: [ master ] #trigger on each push to master
+    branches: [ main ] #trigger on each push to master
   pull_request:
-    branches: [ master ] #trigger on each PR for master
+    branches: [ main ] #trigger on each PR for master
 
 #list of jobs to perform
 jobs:
