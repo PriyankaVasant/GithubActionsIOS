@@ -23,21 +23,15 @@
 # GitHub recommends pinning actions to a commit SHA.
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
-name: Move new issues into Project Board Column
 on:
   issues:
-    types: [ assigned ]
+    types: [assigned]
 jobs:
-  move-issue-to-repository-project-column-on-pull-request:
-    name: Move issues to repository project column
+  Add_New_Issue_To_Project:
     runs-on: ubuntu-latest
     steps:
-      - name: Move all issues related to current PR(into main branch) and child PRs to 'Done' column
-        uses: fojia/action-move-issues-to-column@master
-        with:
-          project: 'LetsRock'
-          column: 'In Progress'
-          owner: 'PriyankaVasant'
-          repo: 'action-move-issues-to-column'
-          github_token: ${{ secrets.DOCS_API_KEY }}
-          branch: main
+    - uses: konradpabjan/actions-add-new-issue-to-column@v1.1
+      with:
+        action-token: "${{ secrets.DOCS_API_KEY }}"
+        project-url: "https://github.com/users/PriyankaVasant/projects/9"
+        column-name: "In Progress"
