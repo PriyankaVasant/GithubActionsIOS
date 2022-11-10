@@ -15,17 +15,26 @@
 # GitHub recommends pinning actions to a commit SHA.
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# GitHub recommends pinning actions to a commit SHA.
+# To get a newer version, you will need to update the SHA.
+# You can also reference a tag or branch, but the action may change without warning.
 
 name: Move assigned card
-on: [issues]
+on:
+  issues:
+    types:
+      - assigned
 jobs:
-  add-new-issues-to-project-column:
+  move-assigned-card:
     runs-on: ubuntu-latest
     steps:
-    - name: Move assigned card
-      uses: docker://takanabe/github-actions-automate-projects:v0.0.1
-      if:  github.event.action == 'assigned'
-      env:
-        GITHUB_TOKEN: ${{ secrets.DOCS_API_KEY }}
-        GITHUB_PROJECT_URL: https://github.com/users/PriyankaVasant/projects/7
-        GITHUB_PROJECT_COLUMN_NAME: In Progress
+      - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
+        with:
+          project: GithubActionsIOS
+          column: In Progress
+          repo-token: ${{ secrets.DOCS_API_KEY }}
