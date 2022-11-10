@@ -35,7 +35,7 @@ jobs:
       - name: Move all issues related to current PR(into main branch) and child PRs to 'Done' column
         uses: fojia/action-move-issues-to-column@master
         with:
-          project: 'Backlog'
+          project: 'LetsRock'
           column: 'In Progress'
           owner: 'fojia'
           repo: 'action-move-issues-to-column'
