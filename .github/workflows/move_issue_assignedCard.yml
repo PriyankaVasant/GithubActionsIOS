@@ -17,7 +17,7 @@
 # You can also reference a tag or branch, but the action may change without warning.
 
 name: Add a new GitHub issue to the specified project column
-on: [issues]
+on: [issues, pull_request]
 jobs:
   add-new-issues-to-project-column:
     runs-on: macos-latest
