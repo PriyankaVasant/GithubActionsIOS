@@ -1,0 +1,45 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# GitHub recommends pinning actions to a commit SHA.
+# To get a newer version, you will need to update the SHA.
+# You can also reference a tag or branch, but the action may change without warning.
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# GitHub recommends pinning actions to a commit SHA.
+# To get a newer version, you will need to update the SHA.
+# You can also reference a tag or branch, but the action may change without warning.
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# GitHub recommends pinning actions to a commit SHA.
+# To get a newer version, you will need to update the SHA.
+# You can also reference a tag or branch, but the action may change without warning.
+
+name: Assigned Issues Are In Progress
+
+on:
+  issue:
+    types: [assigned]
+
+jobs:
+  move-to-in-progress:
+    runs-on: ubuntu-latest
+    name: Move to In Progress Column
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+	   - name: Move to In Progress
+	    uses: kin/gh-action-move-issue-to-column@1.0
+		with:
+		  access-token: "#{{ secrets.DOCS_API_KEY }}"
+		  project-name: "My Project"
+		  target-column: "In Progress"
