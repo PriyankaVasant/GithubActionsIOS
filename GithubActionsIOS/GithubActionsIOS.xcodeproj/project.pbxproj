@@ -26,8 +26,6 @@
 		6332B51E291B7B3900963C67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6332B521291B7B3900963C67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6332B523291B7B3900963C67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		633887FC291E15F90096BD0F /* MyLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MyLibrary; sourceTree = "<group>"; };
-		633887FE291E18200096BD0F /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = MyLibrary/Package.swift; sourceTree = "<group>"; };
 		633887FF291E18200096BD0F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		638494C40C100E561DD7A1A3 /* Pods-GithubActionsIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubActionsIOS.release.xcconfig"; path = "Target Support Files/Pods-GithubActionsIOS/Pods-GithubActionsIOS.release.xcconfig"; sourceTree = "<group>"; };
 		9DD5756756C18A8C3B3D0E01 /* Pods_GithubActionsIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubActionsIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,8 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				633887FF291E18200096BD0F /* README.md */,
-				633887FE291E18200096BD0F /* Package.swift */,
-				633887FC291E15F90096BD0F /* MyLibrary */,
 				6332B514291B7B3700963C67 /* GithubActionsIOS */,
 				6332B513291B7B3700963C67 /* Products */,
 				DAEB8D081058791AEBCCD744 /* Pods */,
